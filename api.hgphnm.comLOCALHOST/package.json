@@ -1,0 +1,24 @@
+{
+  "name": "api.hgphnm.comlocalhost",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.3.1",
+    "fs": "^0.0.1-security",
+    "mongoose": "^8.5.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.4",
+    "openai": "^4.56.0"
+  }
+}

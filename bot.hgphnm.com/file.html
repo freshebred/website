@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Discord Channel Messages</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.27.2/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="message-container"></div>
+    <script>
+        const webhookToken = "6MwwHh_83I_4GXp0jDH7TjlQfG_PkfJfLwVOiaPL_3g-ZVZ9KnsB_83Od-WPd4ZinhBE"; // Replace with your actual token
+        const channelId = "1289271817659355187"; // Replace with the channel ID
+
+        async function fetchMessages() {
+            try {
+                const response = await axios.get(`https://discord.com/api/v10/channels/${channelId}/messages`, {
+                    headers: {
+                        Authorization: `Bot ${webhookToken}`
+                    }
+                });
+
+                const messages = response.data;
+
+                messages.forEach(message => {
+                    const messageDiv = document.createElement("div");
+                    messageDiv.textContent = message.content;
+
+                    if (message.attachments.length > 0) {
+                        message.attachments.forEach(attachment => {
+                            const attachmentDiv = document.createElement("div");
+                            attachmentDiv.innerHTML = `<img src="${attachment.url}" alt="${attachment.filename}">`;
+                            attachmentDiv.innerHTML += `<button onclick="downloadAttachment('${attachment.url}')">Download</button>`;
+                            messageDiv.appendChild(attachmentDiv);
+                        });
+                    }
+
+                    document.getElementById("message-container").appendChild(messageDiv);
+                });
+            } catch (error) {
+                console.error("Error fetching messages:", error);
+            }
+        }
+
+        async function downloadAttachment(url) {
+            try {
+                const response = await axios.get(url, { responseType: 'blob' });
+                const blob = new Blob([response.data]);
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = url.split('/').pop();
+                a.click();
+                window.URL.revokeObjectURL(url);
+            } catch (error) {
+                console.error("Error downloading attachment:", error);
+            }
+        }
+
+        fetchMessages();
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "bot.hgphnm.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node cmd.js",
+    "go":"nodemon bot.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "prettier": "3.3.3"
+  }
+}

@@ -1,0 +1,19 @@
+[
+    {"desc": "tỏ tình crush", "state": false},
+    {"desc":"đi chơi ngoài có crush loz tao", "state":false},
+    {"desc": "đi workshop với nhóm bạn","stat":"0/1"},
+    {"desc": "đi ăn với nhóm bạn","stat":"0/1"},
+    {"desc": "chơi bóng rổ","state":false},
+    {"desc": "chơi cầu lông","state":true},
+    {"desc": "trao đi ko nhận lại","stat":"8/50"},
+    {"desc": "đi chơi đêm cùng nhóm bạn","state":false},
+    {"desc": "chụp photo booth","stat":"0/1"},
+    {"desc": "ôm 50 người", "stat":"2/50"},
+    {"desc": "ăn lẩu tự sôi:)))","stat":"0/1"},
+    {"desc": "hoàn thành dự án lời nói cuối cùng","state":false},
+    {"desc": "chụp hình lớp","stat":"1/1"},
+    {"desc": "đi chơi ngoại khóa với trg","state":false},
+    {"desc": "tweark:)))","state":false},
+    {"desc": "đi hát karaoke với bạn","state":false},
+    {"desc": "uốnggggg ","state":false}
+]

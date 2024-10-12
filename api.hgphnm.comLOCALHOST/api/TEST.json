@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Tickets Support",
+    "description": "Welcome to the support channel!\nDont ping anyone\nDM @magicgamer for bugs\nWait and you'll be supported soon.",
+    "color ": 2586357,
+    "footer": { "text": "Tickets Support Automated Message" },
+    "thumbnail": { "url": "https://i.imgur.com/xeXrEA4.png" },
+    "author": {
+      "name": "Support Bot",
+      "icon_url": "https://i.imgur.com/ZC6cs1d.png"
+    }
+  }
+]

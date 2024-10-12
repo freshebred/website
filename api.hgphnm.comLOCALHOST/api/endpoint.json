@@ -1,0 +1,191 @@
+{
+  "routes": {
+    "/usage": [
+      {
+        "endpoint": "",
+        "description": "display all available endpoints at v1.hgphnm.com",
+        "usage": [
+          {
+            "method": "GET",
+            "endpoint": "https://v1.hgphnm.com/usage"
+          }
+        ]
+      }
+    ],
+    "/discord": [
+      {
+        "/time": [
+          {
+            "description": "return current time in unix epoch time",
+            "usage": [
+              {
+                "method": "GET",
+                "endpoint": "https://v1.hgphnm.com/discord/time"
+              },
+              {
+                "method": "GET",
+                "exampleCallEndpoint": "https://v1.hgphnm.com/discord/time",
+                "exampleResponse": {
+                  "status": "200",
+                  "response": { "time": "1723123889" }
+                }
+              }
+            ]
+          },
+          {
+            "endpoint": "/forward",
+            "description": "return current time plus an amount of seconds in unix epoch time",
+            "usage": [
+              {
+                "method": "GET",
+                "endpoint": "https://v1.hgphnm.com/discord/time/forward/<SECONDS-INTO-FUTURE>"
+              },
+              {
+                "method": "GET",
+                "exampleCallEndpoint": "https://v1.hgphnm.com/discord/time/forward/300",
+                "exampleResponse": {
+                  "status": "200",
+                  "response": {
+                    "current_time": "1723123889",
+                    "time": "1723124189"
+                  }
+                },
+                "exampleErrorResponse": [
+                  {
+                    "status": "400",
+                    "response": { "error": "bad request" }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "endpoint": "/backward",
+            "description": "return current time plus an amount of seconds in unix epoch time",
+            "usage": [
+              {
+                "method": "GET",
+                "endpoint": "https://v1.hgphnm.com/discord/time/backward/<SECONDS-INTO-PAST>"
+              },
+              {
+                "method": "GET",
+                "exampleCallEndpoint": "https://v1.hgphnm.com/discord/time/backward/300",
+                "exampleResponse": {
+                  "status": "200",
+                  "response": {
+                    "current_time": "1723123889",
+                    "time": "1723123589"
+                  }
+                },
+                "exampleErrorResponse": [
+                  {
+                    "status": "400",
+                    "response": { "error": "bad request" }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "endpoint": "/reform",
+            "description": "transform human spoken time like \"100 seconds\" into time that discord understand \"100s\"",
+            "usage": [
+              {
+                "method": "GET",
+                "endpoint": "https://v1.hgphnm.com/discord/time/reform/<TIME-GOES-HERE>"
+              },
+              {
+                "method": "GET",
+                "exampleCallEndpoint": "https://v1.hgphnm.com/discord/time/reform/24 hours",
+                "exampleResponse": {
+                  "status": "200",
+                  "response": { "time": "24h" }
+                },
+                "exampleErrorResponse": [
+                  {
+                    "status": "400",
+                    "response": { "error": "Missing time param" }
+                  },
+                  {
+                    "status": "400",
+                    "response": { "error": "unsupported time unit" }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "endpoint": "/human-reform",
+            "description": "transform short time like \"100s\" into human spoken time \"100 seconds\"",
+            "headers": {},
+            "body": {},
+            "usage": [
+              {
+                "method": "GET",
+                "endpoint": "https://v1.hgphnm.com/discord/time/reform/<TIME-GOES-HERE>"
+              },
+              {
+                "method": "GET",
+                "exampleCallEndpoint": "https://v1.hgphnm.com/discord/time/human-reform/24h",
+                "exampleCallHeaders": {},
+                "exampleCallBody": {},
+                "exampleResponse": {
+                  "status": "200",
+                  "response": { "time": "24 hours" }
+                },
+                "exampleErrorResponse": [
+                  {
+                    "status": "400",
+                    "response": { "error": "Missing time param" }
+                  },
+                  {
+                    "status": "400",
+                    "response": { "error": "unsupported time unit" }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "/msc": [
+          {
+            "endpoint": "/validate-array",
+            "description": "checks if an array is properly formed",
+            "usage": [
+              {
+                "method": "POST",
+                "endpoint": "https://v1.hgphnm.com/discord/msc/validate-array",
+                "headers": {},
+                "body": {
+                  "array": ["<ARRAY-GOES-HERE>"]
+                }
+              },
+              {
+                "method": "POST",
+                "exampleCallEndpoint": "https://v1.hgphnm.com/discord/msc/validate-array",
+                "exampleCallHeaders": {},
+                "exampleCallBody": {
+                  "array": ["a", "b", "c"]
+                },
+                "exampleResponse": [
+                  {
+                    "status": "200",
+                    "response": ["a", "b", "c"]
+                  }
+                ],
+                "exampleErrorResponse": [
+                  {
+                    "status": "400",
+                    "response": { "error": "Array is not properly formed" }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

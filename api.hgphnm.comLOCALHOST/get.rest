@@ -1,0 +1,127 @@
+GET https://v1.hgphnm.com/auth
+Content-Type: application/json
+
+{
+    "auth": "SnEMEhHMoSGd2f7"
+}
+
+###
+POST https://v1.hgphnm.com/db
+Content-Type: application/json
+
+{
+    "name":"pnam",
+    "email":"pnam@hgphnm.com",
+    "product":"1"
+}
+###
+GET https://v1.hgphnm.com/db/6694d015c5fa4d171fa9d701
+
+###
+DELETE https://v1.hgphnm.com/db/66953aa045994e351397affd
+
+###
+PATCH https://v1.hgphnm.com/db/6694d015c5fa4d171fa9d701
+Content-Type: application/json
+
+{
+    "product":"2",
+    "email" : "support@hgphnm.com"
+}
+
+###
+POST http://localhost:3000/auth
+
+###
+GET http://localhost:3000/auth/rB4vKqkMNIhgjeHg2ucNTK72H8xEnQlFiuFzrHZLLI9kv4Eud8iDQyXxaVEpiVVG
+Content-Type: application/json
+
+{
+    "name":"nam",
+    "email":"email",
+    "product":"1"
+}
+###
+GET http://localhost:3000/auth
+Content-Type: application/json
+
+{
+    "auth": "SnEMEhHMoSGd2f7"
+}
+###
+GET http://localhost:3000/db/SnEMEhHMoSGd2f7
+
+###
+POST http://localhost:3000/db/0O63X5eHPgb99soZJhqGBUaMTkNVk9NN6omtiX5yI6wif7PuZxCkn2UCMuJmjpYP
+Content-Type: application/json
+
+{
+    "name": "SnEMEhHMoSGd2f7",
+    "email":"mail",
+    "product":"e"
+}
+###
+DELETE http://localhost:3000/auth/0O63X5eHPgb99soZJhqGBUaMTkNVk9NN6omtiX5yI6wif7PuZxCkn2UCMuJmjpYP
+###
+
+POST https://v1.hgphnm.com/auth
+
+###
+POST https://v1.hgphnm.com/db/0O63X5eHPgb99soZJhqGBUaMTkNVk9NN6omtiX5yI6wif7PuZxCkn2UCMuJmjpYP
+Content-Type: application/json
+
+{
+    "name":"nam",
+    "email":"email",
+    "product":"1"
+}
+###
+GET https://v1.hgphnm.com/auth/
+Content-Type: application/json
+
+{
+    "auth": "SnEMEhHMoSGd2f7"
+}
+###
+DELETE https://v1.hgphnm.com/auth/ZnPQZp6TEBWi6fPg40yb7RyZ810QsLwMOtBGm4nYLoNhssHwYVeuxtDUJi9xzBwf
+
+###
+GET http://v1.hgphnm.com/db/get/SnEMEhHMoSGd2f7
+
+###
+GET http://v1.hgphnm.com/db/get/SnEMEhHMoSGd2f7
+###
+DELETE https://v1.hgphnm.com/db/6695541ae2843921ab29c141
+
+###
+POST https://discord.com/api/v10/oauth2/token
+###
+POST http://localhost:3000/auth
+###
+GET http://localhost:3000/bug-count
+###
+GET http://localhost:3000/auth/get/SnEMEhHMoSGd2f7
+###
+GET http://localhost:3000/db/get/SnEMEhHMoSGd2f7
+###
+DELETE http://localhost:3000/db/delete/669c90496e01c3cd082f2349
+###
+DELETE http://localhost:3000/auth/3H2wubdHn8l1NlWk75p0ZNn92AnXtqKMZCS9kgPW3FU7NLE9kZAjYcYLzCa9uLR3
+###
+GET https://v1.hgphnm.com/discord/text/transcript/MTI1NzUzNjExNzY1ODQ4ODg0Mg.Gt5bxk.o7C_gOVBXLrcPBzAW6WO6gb7QvsAX9zF1oGpEM/1246492466279088178/1F2bLgLPtG082VU8PFY2xjkUca1Q752UJ3C4JIGcemtM3u3vFGPxt6VobWTDHl3m
+Content-Type: application/json,
+Authorization:1F2bLgLPtG082VU8PFY2xjkUca1Q752UJ3C4JIGcemtM3u3vFGPxt6VobWTDHl3m
+
+###
+POST http://localhost:3000/auth
+Content-Type: application/json
+
+{
+    "auth":"SnEMEhHMoSGd2f7",
+    "discordId":"986959868336410634"
+}
+###
+GET http://localhost:3000/auth/get/SnEMEhHMoSGd2f7
+###
+DELETE http://localhost:3000/auth/3OlplMSkE6Z1UfpLWSQhIXRlxQ49FDLb7e0SxyDWLD9EE7gxWdugkeDvmwXLC8xi
+###

@@ -1,0 +1,30 @@
+*{
+  user-select: none;
+
+}
+.draggable {
+cursor: move;
+position: fixed; /* For absolute positioning */
+background-color: wheat;
+}
+.resizable {
+width: auto;
+height: auto;
+}
+.obstacle {
+background-color: black;
+position: fixed;
+}
+.static{
+position: fixed;
+}
+div {
+max-height: inherit;
+width: auto;
+height: auto;
+}
+
+.goal {
+position: fixed; /* For absolute positioning */
+background-color: #4fd82c;
+}

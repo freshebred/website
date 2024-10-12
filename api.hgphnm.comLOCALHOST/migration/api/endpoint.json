@@ -1,0 +1,104 @@
+{
+    "/usage":[{
+        "endpoint":"",
+        "description":"display all available endpoints at v1.hgphnm.com",
+        "usage":[{
+            "method":"GET",
+            "endpoint":"https://v1.hgphnm.com/usage"
+        }]
+    }],
+    "/discord":[
+        {
+            "/time":[
+                {
+                    "endpoint":"/reform",
+                    "description":"transform human spoken time like \"100 seconds\" into time that discord understand \"100s\"",
+                    "usage":[{
+                        "method":"GET",
+                        "endpoint":"https://v1.hgphnm.com/discord/time/reform/<TIME-GOES-HERE>"
+                    },
+                    {
+                        "method":"GET",
+                        "exampleCallEndpoint":"https://v1.hgphnm.com/discord/time/reform/24 hours",
+                        "exampleResponse":{
+                            "status":"200",
+                            "response":{"time":"24h"}
+                        },
+                        "exampleErrorResponse":[
+                            {
+                                "status":"400",
+                                "response":{"error":"Missing time param"}
+
+                            },
+                            {
+                                "status":"400",
+                                "response":{"error":"unsupported time unit"}
+                            }
+                        ]
+                    }]
+                },
+                {
+                    "endpoint":"/human-reform",
+                    "description":"transform short time like \"100s\" into human spoken time \"100 seconds\"",
+                    "usage":[{
+                        "method":"GET",
+                        "endpoint":"https://v1.hgphnm.com/discord/time/reform/<TIME-GOES-HERE>"
+                    },
+                    {
+                        "method":"GET",
+                        "exampleCallEndpoint":"https://v1.hgphnm.com/discord/time/human-reform/24h",
+                        "exampleResponse":{
+                            "status":"200",
+                            "response":{"time":"24 hours"}
+                        },
+                        "exampleErrorResponse":[
+                            {
+                                "status":"400",
+                                "response":{"error":"Missing time param"}
+
+                            },
+                            {
+                                "status":"400",
+                                "response":{"error":"unsupported time unit"}
+                            }
+                        ]
+                    }]
+                }
+            ]
+        },
+        {
+            "/msc":[
+                {
+                    "endpoint":"/validate-array",
+                    "description":"checks if an array is properly formed",
+                    "usage":[{
+                        "method":"POST",
+                        "endpoint":"https://v1.hgphnm.com/discord/msc/validate-array",
+                        "body":{
+                            "array":["<ARRAY-GOES-HERE>"]
+                        }
+                    },
+                    {
+                        "method":"POST",
+                        "exampleCallEndpoint":"https://v1.hgphnm.com/discord/msc/validate-array",
+                        "exampleCallBody":{
+                            "array":["a","b","c"]
+                        },
+                        "exampleResponse":[
+                            {
+                                "status":"200",
+                                "response":["a","b","c"]
+                            }
+                        ],
+                        "exampleErrorResponse":[
+                            {
+                                "status":"400",
+                                "response":{"error":"Array is not properly formed"}
+                            }
+                        ]
+                    }]
+                }
+            ]
+        }
+    ]
+}

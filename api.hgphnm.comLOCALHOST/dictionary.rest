@@ -1,0 +1,37 @@
+GET http://localhost:3000/auth/get/SnEMEhHMoSGd2f7
+###
+GET http://localhost:3000/db/get/SnEMEhHMoSGd2f7
+###
+POST http://localhost:3000/auth
+###
+POST http://localhost:3000/db/create/PEsaMxX27pnSZfiTLcdCAQAgQZot1x0g53FgvKVdKkMGejF7d42pYrKfd5ohj2JW
+Content-Type: application/json
+
+{
+    "name":"nam",
+    "email":"email",
+    "product":"1"
+}
+###
+GET http://localhost:3000/auth/validate/dzSNeIPRj28cpAGQBig90VW9lqhFjvxEleXlOlBSuhjTZmAdUVVJ4COkReV0C51f
+###
+GET http://localhost:3000/auth/validate/iMyVfkWx5GCjyuoD0i1TpCiybQLXS5D5IFrY5vWDmixFJI7ba0nYLD4uWh09Fzvx
+###
+GET http://localhost:3000/bug-count
+###
+GET http://localhost:3000/discord/time/human-reform/2s
+###
+POST https://v1.hgphnm.com/msc/validate-array
+Content-Type: application/json
+
+{"array":["bread","cheese","brot"]}
+###
+POST http://localhost:3000/msc/validate-array
+Content-Type: application/json
+
+{"array":["bread","cheese","brot"]}
+###
+POST https://xjp.morganfutures144.com/index/login/reg/index/1723450834
+Content-Type: application/json
+
+{"array":["bread","cheese","brot"]}
