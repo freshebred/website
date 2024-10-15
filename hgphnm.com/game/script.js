@@ -253,6 +253,11 @@ function start(lv) {
       levelData[lv].property[i].t,
       levelData[lv].property[i].l
     );
+    if(levelData[lv].property[i].id){
+      document.getElementById(id).setAttribute("id", levelData[lv].property[i].id);
+
+    }
+
   }
 }
 function reset() {
