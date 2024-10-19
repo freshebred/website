@@ -1,7 +1,12 @@
 .env
 node_modules/
 package-lock.json
-
+*.png
+*.jpg
+*.jpeg
+*.mp4
+*.mp3
+*.m4a
 
 
 
